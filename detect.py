@@ -2,12 +2,14 @@
 
 import numpy as np
 import cv2
+import time
 import sys
 from glob import glob
 import itertools as it
 
-face1 = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
 video_capture = cv2.VideoCapture(0)
+time.sleep(1)
+face1 = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
 overlay = cv2.imread("mask.png", -1)
 
 def detect(img, cascade):
